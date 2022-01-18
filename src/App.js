@@ -18,8 +18,8 @@ const theme = createMuiTheme({
 });
 
  const App = () => {
-     const [places, setPlaces ] = useState([]);
      const [filteredPlaces, setFilteredPlaces] = useState([]);
+     const [places, setPlaces ] = useState([]);
      const [childClicked, setChildClicked] = useState(null)
      const [coordinates, setCoordinates] = useState({})
      const [bounds, setBounds] = useState({});
@@ -35,7 +35,7 @@ const theme = createMuiTheme({
 },[]);
 
      useEffect(() => {
-         const filteredPlaces = places.filter((place) => place.rating > rating);
+         const filteredPlaces = places.filter((place) => Number(place.rating) > rating);
          setFilteredPlaces(filteredPlaces);
      },[rating]);
 
