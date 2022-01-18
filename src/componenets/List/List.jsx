@@ -11,7 +11,7 @@ const List = ({places, childClicked, isLoading, type, setType, rating, setRating
     useEffect(() => {
         const refs = Array(places?.length).fill().map((_, i) => elRefs[i] || createRef());
         setElRefs(refs);
-    }, [places])
+    }, [places]) // eslint-disable-line react-hooks/exhaustive-deps
 
     return (
         <div className={classes.container}>

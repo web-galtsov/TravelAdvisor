@@ -35,9 +35,9 @@ const theme = createMuiTheme({
 },[]);
 
      useEffect(() => {
-         const filteredPlaces = places.filter((place) => Number(place.rating) > rating);
+          const filteredPlaces = places.filter((place) => Number(place.rating) > rating);
          setFilteredPlaces(filteredPlaces);
-     },[rating]);
+     },[rating, places]);
 
      useEffect(() => {
          if(bounds.sw && bounds.ne) {
